@@ -21,8 +21,11 @@
 		}
 	],
 	"autoload": {
+		"psr-4": {
+			"ConnectHolland\\Eportfolio\\Addon\\Academy\\": "src/"
+		},
 		"classmap": [
-			"src/"
+			"src/Modules"
 		]
 	}
 }

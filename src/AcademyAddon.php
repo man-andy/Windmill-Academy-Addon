@@ -2,6 +2,8 @@
 
 namespace ConnectHolland\Eportfolio\Addon\Academy;
 
-class AcademyAddon {
+use WMAddon;
+
+class AcademyAddon extends WMAddon {
 
 }
