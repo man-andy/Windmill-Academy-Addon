@@ -19,5 +19,10 @@
 			"type": "composer",
 			"url": "https://composer.packages.connectholland.nl"
 		}
-	]
+	],
+	"autoload": {
+		"classmap": [
+			"src/"
+		]
+	}
 }
