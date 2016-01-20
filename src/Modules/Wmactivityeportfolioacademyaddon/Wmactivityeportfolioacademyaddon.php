@@ -7,8 +7,8 @@
  */
 use Windmill\Modules\Wmmongo\MongoObject;
 use Windmill\Modules\Wmmongo\ObjectFactory;
-// use Windmill\Modules\Wmmongoeportfolio\Activity;
-// use Windmill\Modules\Wmactivityeportfolio\Activityevent;
+use Windmill\Modules\Wmmongoeportfolio\Activity;
+use Windmill\Modules\Wmactivityeportfolio\Activityevent;
 
 class WmactivityeportfolioacademyaddonSettings extends WmactivityeportfolioCMS
 {
