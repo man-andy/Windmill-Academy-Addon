@@ -31,7 +31,7 @@ class Wmactivityeportfolioacademyaddon extends WmactivityeportfolioacademyaddonS
      * Performances actions identified by $mode
      *
      * @param MongoCriteria $mc
-     * @return $mc
+     * @return MongoCriteria $mc
      */
     protected function handleMode(MongoCriteria $mc)
     {
@@ -48,6 +48,7 @@ class Wmactivityeportfolioacademyaddon extends WmactivityeportfolioacademyaddonS
                 $mc->setLimit(3);
                 break;
             case 'related':
+            case 'special':
                 $this->view = "blocks";
                 $mc->add("special", true);
                 $mc->add("activity_type", array("", "rekenen-en-taal"), MongoCriteria::NOT_IN);
@@ -81,22 +82,20 @@ class Wmactivityeportfolioacademyaddon extends WmactivityeportfolioacademyaddonS
     }
 
     /**
-     * Removes the option Rekenen en taal in the filter on the homepage
-     *
-     * @param MongoCriteria $mc
-     * @param array $filter
-     * @return $result
-     */
-    protected function getFilterOptions(MongoCriteria $mc, array $filter)
-    {
-        $result = parent::getFilterOptions($mc, $filter);
+    * Adds $mongoobject to the container, checks if there's already applied
+    *
+    * @param MongoObject $mongoobject
+    * @return WIContentTree $ce
+    */
+   protected function addMongoObject(MongoObject $mongoobject)
+   {
+       $ce = parent::addMongoObject($mongoobject);
+       if ($mongoobject->checkAlreadyApplied()) {
+           $ce->addProperty('already_applied', '1');
+       }
 
-        if ($this->mode === "categories") {
-            $result->add("activity_type", "rekenen-en-taal");
-        }
-
-        return $result;
-    }
+       return $ce;
+   }
 }
 
 class WmactivityeportfolioacademyaddonCMS extends Wmactivityeportfolioacademyaddon
