@@ -1,0 +1,123 @@
+@charset 'utf-8';
+
+@font-face {
+    font-family: 'icon';
+    src: url('/var/fonts/icon.eot');
+    src: url('/var/fonts/icon.eot?#iefix') format('eot'),
+        url('/var/fonts/icon.woff') format('woff'),
+        url('/var/fonts/icon.ttf') format('truetype'),
+        url('/var/fonts/icon.svg#icon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$icon-add: 'add' '\EA01';
+$icon-archive: 'archive' '\EA02';
+$icon-arrow-down: 'arrow-down' '\EA03';
+$icon-arrow-left: 'arrow-left' '\EA04';
+$icon-arrow-right: 'arrow-right' '\EA05';
+$icon-arrow-up: 'arrow-up' '\EA06';
+$icon-arrow: 'arrow' '\EA07';
+$icon-at: 'at' '\EA08';
+$icon-bell: 'bell' '\EA09';
+$icon-book: 'book' '\EA0A';
+$icon-book2: 'book2' '\EA0B';
+$icon-briefcase: 'briefcase' '\EA0C';
+$icon-building: 'building' '\EA0D';
+$icon-bulb: 'bulb' '\EA0E';
+$icon-calendar: 'calendar' '\EA0F';
+$icon-cancel: 'cancel' '\EA10';
+$icon-check: 'check' '\EA11';
+$icon-clipboard: 'clipboard' '\EA12';
+$icon-cog: 'cog' '\EA13';
+$icon-credit-card: 'credit-card' '\EA14';
+$icon-creditcard: 'creditcard' '\EA15';
+$icon-delete: 'delete' '\EA16';
+$icon-download: 'download' '\EA17';
+$icon-earth: 'earth' '\EA18';
+$icon-edit: 'edit' '\EA19';
+$icon-euro: 'euro' '\EA1A';
+$icon-exit: 'exit' '\EA1B';
+$icon-eye: 'eye' '\EA1C';
+$icon-face: 'face' '\EA1D';
+$icon-facebook: 'facebook' '\EA1E';
+$icon-file-text: 'file-text' '\EA1F';
+$icon-forum: 'forum' '\EA20';
+$icon-gift: 'gift' '\EA21';
+$icon-gift2: 'gift2' '\EA22';
+$icon-graduation: 'graduation' '\EA23';
+$icon-home: 'home' '\EA24';
+$icon-linkedin: 'linkedin' '\EA25';
+$icon-lock: 'lock' '\EA26';
+$icon-lock_open: 'lock_open' '\EA27';
+$icon-mail: 'mail' '\EA28';
+$icon-mail_envelop: 'mail_envelop' '\EA29';
+$icon-mapmarker: 'mapmarker' '\EA2A';
+$icon-message: 'message' '\EA2B';
+$icon-notification: 'notification' '\EA2C';
+$icon-pdf: 'pdf' '\EA2D';
+$icon-phone: 'phone' '\EA2E';
+$icon-phone_old: 'phone_old' '\EA2F';
+$icon-profile: 'profile' '\EA30';
+$icon-question: 'question' '\EA31';
+$icon-quote: 'quote' '\EA32';
+$icon-ribbon: 'ribbon' '\EA33';
+$icon-search: 'search' '\EA34';
+$icon-share: 'share' '\EA35';
+$icon-shopping_cart: 'shopping_cart' '\EA36';
+$icon-smile2: 'smile2' '\EA37';
+$icon-star-empty: 'star-empty' '\EA38';
+$icon-star-full: 'star-full' '\EA39';
+$icon-switcher: 'switcher' '\EA3A';
+$icon-tag: 'tag' '\EA3B';
+$icon-time: 'time' '\EA3C';
+$icon-timelapse: 'timelapse' '\EA3D';
+$icon-trophy: 'trophy' '\EA3E';
+$icon-twitter: 'twitter' '\EA3F';
+$icon-user-plus: 'user-plus' '\EA40';
+$icon-user-tie: 'user-tie' '\EA41';
+$icon-user: 'user' '\EA42';
+$icon-view-blocks: 'view-blocks' '\EA43';
+$icon-view-detail: 'view-detail' '\EA44';
+$icon-view-list: 'view-list' '\EA45';
+$icon-warning: 'warning' '\EA46';
+$icon-whatsapp: 'whatsapp' '\EA47';
+$icon-youtube: 'youtube' '\EA48';
+
+
+$icon: $icon-add $icon-archive $icon-arrow-down $icon-arrow-left $icon-arrow-right $icon-arrow-up $icon-arrow $icon-at $icon-bell $icon-book $icon-book2 $icon-briefcase $icon-building $icon-bulb $icon-calendar $icon-cancel $icon-check $icon-clipboard $icon-cog $icon-credit-card $icon-creditcard $icon-delete $icon-download $icon-earth $icon-edit $icon-euro $icon-exit $icon-eye $icon-face $icon-facebook $icon-file-text $icon-forum $icon-gift $icon-gift2 $icon-graduation $icon-home $icon-linkedin $icon-lock $icon-lock_open $icon-mail $icon-mail_envelop $icon-mapmarker $icon-message $icon-notification $icon-pdf $icon-phone $icon-phone_old $icon-profile $icon-question $icon-quote $icon-ribbon $icon-search $icon-share $icon-shopping_cart $icon-smile2 $icon-star-empty $icon-star-full $icon-switcher $icon-tag $icon-time $icon-timelapse $icon-trophy $icon-twitter $icon-user-plus $icon-user-tie $icon-user $icon-view-blocks $icon-view-detail $icon-view-list $icon-warning $icon-whatsapp $icon-youtube;
+
+@mixin icon($name) {
+    &:before {
+        @include icon-style($name);
+        @content;
+    }
+}
+
+@mixin icon-after($name) {
+    &:after {
+        @include icon-style($name);
+        @content;
+    }
+}
+
+@mixin icon-style($name) {
+    @each $icon in $icon {
+        $n: index($icon, $name);
+        @if $n != null {
+            @include  icon-content($icon);
+        }
+    }
+    font-family: 'icon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin icon-content($icon) {
+    content: nth($icon, 2);
+}

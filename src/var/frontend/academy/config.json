@@ -1,0 +1,64 @@
+{
+	"default_tasks": ["sass", "headjs", "bodyjs"],
+	"install_tasks": ["icons","ie8-headjs", "ie8-bodyjs"],
+	"production": true,
+	"sass": {
+		"src": [
+			"style/*.scss"
+		],
+		"dest": "style/optimized/",
+		"watch": ["style/*.scss","../../../vendor/connectholland/eportfolio-material-design-skin/assets/css/**/*.scss"],
+		"includePaths": [
+			"../../../vendor/connectholland",
+			"bower_components/connect-holland-mixins",
+			"bower_components/foundation/scss",
+			"bower_components/normalize-scss",
+            "bower_components/select2/src/scss"
+		],
+		"autoprefix": ["last 2 versions", "IE >= 8"]
+	},
+	"headjs": {
+		"src": [
+			"bower_components/modernizr/modernizr.js",
+	        "bower_components/jquery-modern/dist/jquery.js",
+	        "bower_components/jquery-placeholder/jquery.placeholder.min.js",
+	        "bower_components/jquery-cookie/jquery.cookie.js",
+	        "../../../vendor/connectholland/eportfolio-material-design-skin/assets/javascript/head.js"
+		],
+		"dest": "javascript/optimized/",
+		"watch": "javascript/**/*.js",
+		"options": {
+			"mangle": true
+		}
+	},
+	"bodyjs": {
+		"src": [
+			"bower_components/Slidebars/dist/slidebars.min.js",
+			"bower_components/slick.js/slick/slick.min.js",
+			"bower_components/foundation/js/foundation/foundation.js",
+			"bower_components/foundation/js/foundation/foundation.tooltip.js",
+			"bower_components/foundation/js/foundation/foundation.alert.js",
+			"bower_components/select2/dist/js/select2.js",
+			"bower_components/isotope/dist/isotope.pkgd.js",
+			"bower_components/isotope-packery/packery-mode.pkgd.js",
+			"bower_components/jquery-hoverIntent/jquery.hoverIntent.js",
+	        "bower_components/jquery-circle-progress/dist/circle-progress.js",
+			"bower_components/waypoints/lib/jquery.waypoints.js",
+			"../../../vendor/connectholland/eportfolio-material-design-skin/assets/javascript/body.js",
+			"javascript/body.js",
+			"javascript/vendor/WJAccordionEportfolio.js"
+		],
+		"dest": "javascript/optimized/",
+		"options": {
+			"mangle": true
+		}
+	},
+	"icons": {
+		"src": [
+			"../../../vendor/connectholland/eportfolio-material-design-skin/assets/icons/*.svg"
+		],
+		"dest": "../../../var/fonts",
+		"webpath": "/var/fonts/",
+        "generatedScss": "style/generated"
+	}
+}
