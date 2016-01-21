@@ -1,13 +1,13 @@
-@import "../../../vendor/connectholland/eportfolio-material-design-skin/assets/css/normalize";
-@import "../../../vendor/connectholland/eportfolio-material-design-skin/assets/css/theme";
+@import "../../../../../eportfolio-material-design-skin/assets/css/normalize";
+@import "../../../../../eportfolio-material-design-skin/assets/css/theme";
 @import "theme";
-@import "../../../vendor/connectholland/eportfolio-material-design-skin/assets/css/mixins";
-@import "../../../vendor/connectholland/eportfolio-material-design-skin/assets/css/foundation/foundation";
-@import "../../../vendor/connectholland/eportfolio-material-design-skin/assets/css/offcanvas";
-@import "../../../vendor/connectholland/eportfolio-material-design-skin/assets/css/waves";
-@import "../../../vendor/connectholland/eportfolio-material-design-skin/assets/css/common";
-@import "../../../vendor/connectholland/eportfolio-material-design-skin/assets/css/animations";
-@import "../../../vendor/connectholland/eportfolio-material-design-skin/assets/css/generated/icon";
+@import "../../../../../eportfolio-material-design-skin/assets/css/mixins";
+@import "../../../../../eportfolio-material-design-skin/assets/css/foundation/foundation";
+@import "../../../../../eportfolio-material-design-skin/assets/css/offcanvas";
+@import "../../../../../eportfolio-material-design-skin/assets/css/waves";
+@import "../../../../../eportfolio-material-design-skin/assets/css/common";
+@import "../../../../../eportfolio-material-design-skin/assets/css/animations";
+@import "../../../../../eportfolio-material-design-skin/assets/css/generated/icon";
 
 * {
     -webkit-font-smoothing: antialiased;
@@ -33,26 +33,26 @@ html {
         padding: 0;
         height: 100%;
     
-        @import "../../../vendor/connectholland/eportfolio-material-design-skin/assets/css/aeroplane";
-        @import "../../../vendor/connectholland/eportfolio-material-design-skin/assets/css/form";
-        @import "../../../vendor/connectholland/eportfolio-material-design-skin/assets/css/login";
-        @import "../../../vendor/connectholland/eportfolio-material-design-skin/assets/css/overview";
-        @import "../../../vendor/connectholland/eportfolio-material-design-skin/assets/css/articles";
-        @import "../../../vendor/connectholland/eportfolio-material-design-skin/assets/css/accountmanagement";
-        @import "../../../vendor/connectholland/eportfolio-material-design-skin/assets/css/pager";
-        @import "../../../vendor/connectholland/eportfolio-material-design-skin/assets/css/notifications";
-        @import "../../../vendor/connectholland/eportfolio-material-design-skin/assets/css/error";
-        @import "../../../vendor/connectholland/eportfolio-material-design-skin/assets/css/vacancy";
-        @import "../../../vendor/connectholland/eportfolio-material-design-skin/assets/css/dashboard";
-        @import "../../../vendor/connectholland/eportfolio-material-design-skin/assets/css/socialmediaposts";
-        @import "../../../vendor/connectholland/eportfolio-material-design-skin/assets/css/search";
-        @import "../../../vendor/connectholland/eportfolio-material-design-skin/assets/css/main";
-        @import "../../../vendor/connectholland/eportfolio-material-design-skin/assets/css/footer";
-        @import "../../../vendor/connectholland/eportfolio-material-design-skin/assets/css/medium";
-        @import "../../../vendor/connectholland/eportfolio-material-design-skin/assets/css/large";
-        @import "../../../vendor/connectholland/eportfolio-material-design-skin/assets/css/xlarge";
-        @import "../../../vendor/connectholland/eportfolio-material-design-skin/assets/css/breadcrumb";
-        @import "../../../vendor/connectholland/eportfolio-material-design-skin/assets/css/contentblocks";
+        @import "../../../../../eportfolio-material-design-skin/assets/css/aeroplane";
+        @import "../../../../../eportfolio-material-design-skin/assets/css/form";
+        @import "../../../../../eportfolio-material-design-skin/assets/css/login";
+        @import "../../../../../eportfolio-material-design-skin/assets/css/overview";
+        @import "../../../../../eportfolio-material-design-skin/assets/css/articles";
+        @import "../../../../../eportfolio-material-design-skin/assets/css/accountmanagement";
+        @import "../../../../../eportfolio-material-design-skin/assets/css/pager";
+        @import "../../../../../eportfolio-material-design-skin/assets/css/notifications";
+        @import "../../../../../eportfolio-material-design-skin/assets/css/error";
+        @import "../../../../../eportfolio-material-design-skin/assets/css/vacancy";
+        @import "../../../../../eportfolio-material-design-skin/assets/css/dashboard";
+        @import "../../../../../eportfolio-material-design-skin/assets/css/socialmediaposts";
+        @import "../../../../../eportfolio-material-design-skin/assets/css/search";
+        @import "../../../../../eportfolio-material-design-skin/assets/css/main";
+        @import "../../../../../eportfolio-material-design-skin/assets/css/footer";
+        @import "../../../../../eportfolio-material-design-skin/assets/css/medium";
+        @import "../../../../../eportfolio-material-design-skin/assets/css/large";
+        @import "../../../../../eportfolio-material-design-skin/assets/css/xlarge";
+        @import "../../../../../eportfolio-material-design-skin/assets/css/breadcrumb";
+        @import "../../../../../eportfolio-material-design-skin/assets/css/contentblocks";
 
         @import "article";
     }

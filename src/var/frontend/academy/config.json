@@ -7,7 +7,7 @@
 			"style/*.scss"
 		],
 		"dest": "style/optimized/",
-		"watch": ["style/*.scss","../../../vendor/connectholland/eportfolio-material-design-skin/assets/css/**/*.scss"],
+		"watch": ["style/*.scss","../../../../../eportfolio-material-design-skin/assets/css/**/*.scss"],
 		"includePaths": [
 			"../../../vendor/connectholland",
 			"bower_components/connect-holland-mixins",
@@ -23,7 +23,7 @@
 	        "bower_components/jquery-modern/dist/jquery.js",
 	        "bower_components/jquery-placeholder/jquery.placeholder.min.js",
 	        "bower_components/jquery-cookie/jquery.cookie.js",
-	        "../../../vendor/connectholland/eportfolio-material-design-skin/assets/javascript/head.js"
+	        "../../../../../eportfolio-material-design-skin/assets/javascript/head.js"
 		],
 		"dest": "javascript/optimized/",
 		"watch": "javascript/**/*.js",
@@ -44,7 +44,7 @@
 			"bower_components/jquery-hoverIntent/jquery.hoverIntent.js",
 	        "bower_components/jquery-circle-progress/dist/circle-progress.js",
 			"bower_components/waypoints/lib/jquery.waypoints.js",
-			"../../../vendor/connectholland/eportfolio-material-design-skin/assets/javascript/body.js",
+			"../../../../../eportfolio-material-design-skin/assets/javascript/body.js",
 			"javascript/body.js",
 			"javascript/vendor/WJAccordionEportfolio.js"
 		],
@@ -55,7 +55,7 @@
 	},
 	"icons": {
 		"src": [
-			"../../../vendor/connectholland/eportfolio-material-design-skin/assets/icons/*.svg"
+			"../../../../../eportfolio-material-design-skin/assets/icons/*.svg"
 		],
 		"dest": "../../../var/fonts",
 		"webpath": "/var/fonts/",
