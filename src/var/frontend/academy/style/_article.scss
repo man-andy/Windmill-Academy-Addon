@@ -1,7 +1,6 @@
 #wrapper div#main {
     section {
         .actionbox {
-            background: $white;
             border-bottom: 1px solid $border;
             .actionbox_container .contentblock {
                 @include grid-column(12);
@@ -53,21 +52,27 @@
                 padding: $column-gutter;
                 .text_field {
                     input {
+                        color: $text;
                         background: $white; 
                         padding: $column-gutter/2;
+                        border: 1px solid $border;
                     }
                     label {
                         top: 0.7rem;
                         left: 1rem;
+                        span {
+                            display: none;
+                        }
                         &.active {
-                            transform: translateY(-174%);
                             color: $white;
                             left: 0;
+                            font-size: 1rem;
+                            transform: translateY(-150%);
                         }
                     }
                 }
                 .submit_field .btn {
-                    background: $green;
+                    background: $secondButton;
                     border: none;
                     border-radius: 0;
                     display: block;
@@ -75,7 +80,7 @@
                     width: 100%;
                     height: 3rem;
                     &:hover {
-                        background: darken($green,10);
+                        background: darken($secondButton,10);
                         color: $white;
                     }
                     &:after {
@@ -201,6 +206,9 @@
                     padding: 0; 
                     width: 75%;
                     display: inline-block;
+                    label span {
+                        display: inline-block;
+                    }
                 }
                 .submit_field {
                     width: 25%;
@@ -229,30 +237,19 @@
                 }
             }
         }
-        .actionbox {
-            .actionbox_container .contentblock.compositeform {
-                text-align: center;
-                padding: 0;
-                height: 78px;
-                position: static;
-                form {
-                    position: absolute;
-                    width: 100%;
-                    left: 0;
-                    background: $main;
-                    height: 78px;
-                    padding-top: $column-gutter/2;
-                }
-                .text_field {
-                    width: 50%;
-                    label.active {
-                        transform: translateY(0);
-                        left: -156px;
-                        font-size: 0.9rem;
-                    }
-                }
-                .submit_field {
-                    width: 16%;
+        .actionbox .actionbox_container .contentblock.compositeform {
+            padding: 0;
+            height: 108px;
+            position: static;
+            form {
+                position: absolute;
+                width: 100%;
+                left: 0;
+                background: $main;
+                height: 108px;
+                padding-top: $column-gutter;
+                .wrapper {
+                    padding: 0 $column-gutter/2;
                 }
             }
         }
