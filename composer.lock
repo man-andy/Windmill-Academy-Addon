@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f05a7dfee2538b44ab159e0a4a188e59",
-    "content-hash": "24f01cfd46c89996778c2cbb5fd02688",
+    "hash": "23a92c0406d09d1e45d2cb0fa2d0adb7",
+    "content-hash": "e31f843fb42783e5384b52b42d1a8a73",
     "packages": [
         {
             "name": "connectholland/eportfolio",
@@ -62,11 +62,11 @@
         },
         {
             "name": "connectholland/eportfolio-activity-plugin",
-            "version": "1.0.6",
+            "version": "2.0.0",
             "source": {
                 "type": "svn",
                 "url": "svn+ssh://svn.repositories.connectholland.nl/srv/svn/main/eportfolio/plugins/eportfolio_activity",
-                "reference": "/online/1.0.6/@123987"
+                "reference": "/online/2.0.0/@127837"
             },
             "require-dev": {
                 "connectholland/windmill": "~5.4",
@@ -95,7 +95,7 @@
                 }
             ],
             "description": "A Eportfolio plugin to manage and show activites",
-            "time": "2015-11-27 15:58:29"
+            "time": "2016-01-22 14:11:29"
         },
         {
             "name": "connectholland/eportfolio-material-design-skin",
@@ -363,17 +363,17 @@
         },
         {
             "name": "connectholland/windmill",
-            "version": "6.10.3",
+            "version": "6.10.6",
             "source": {
                 "type": "git",
                 "url": "git@github.com:ConnectHolland/Windmill.git",
-                "reference": "6f7b0f702a8c444ba1605ec52ec6ac7dbf2e35ff"
+                "reference": "5a4dd2b149701c71f9f2a2486f28a769d2b13dc8"
             },
             "dist": {
                 "type": "tar",
-                "url": "https://composer.packages.connectholland.nl/dist/connectholland-windmill-6f7b0f702a8c444ba1605ec52ec6ac7dbf2e35ff-zip-8a6975.tar",
-                "reference": "6f7b0f702a8c444ba1605ec52ec6ac7dbf2e35ff",
-                "shasum": "dfc1b14fc7be173738b7741aa7cdbe15a325f1aa"
+                "url": "https://composer.packages.connectholland.nl/dist/connectholland-windmill-5a4dd2b149701c71f9f2a2486f28a769d2b13dc8-zip-073318.tar",
+                "reference": "5a4dd2b149701c71f9f2a2486f28a769d2b13dc8",
+                "shasum": "730c87f93915b6c442de85fa3cdd5e5ec3dec569"
             },
             "require": {
                 "connectholland/propel1": "1.6.7",
@@ -432,7 +432,7 @@
             ],
             "description": "Windmill Framework",
             "homepage": "http://www.connectholland.nl/",
-            "time": "2016-01-20 13:34:24"
+            "time": "2016-01-22 09:09:15"
         },
         {
             "name": "connectholland/windmill-aeroplane-plugin",
