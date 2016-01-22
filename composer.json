@@ -8,12 +8,22 @@
 		}
 	],
 	"require": {
-		"connectholland/windmill": "^6.10"
+		"connectholland/windmill": "^6.10",
+		"connectholland/eportfolio": "^8.0",
+		"connectholland/eportfolio-material-design-skin": "^3.0",
+		"connectholland/eportfolio-activity-plugin": "^1.0"
 	},
 	"repositories": [
 		{
 			"type": "composer",
 			"url": "https://composer.packages.connectholland.nl"
+		},
+		{
+			"type": "vcs",
+			"url": "svn+ssh://svn.repositories.connectholland.nl/srv/svn/main/eportfolio/plugins/eportfolio_activity",
+			"trunk-path": "trunk",
+			"branches-path": "test",
+			"tags-path": "online"
 		}
 	],
 	"autoload": {
@@ -21,7 +31,9 @@
 			"ConnectHolland\\Eportfolio\\Addon\\Academy\\": "src/"
 		},
 		"classmap": [
-			"src/Modules"
+			"src/Modules",
+			"src/xsl",
+			"src/var"
 		]
 	}
 }

@@ -1,0 +1,161 @@
+@import "../../../../../eportfolio-material-design-skin/assets/css/normalize";
+@import "../../../../../eportfolio-material-design-skin/assets/css/theme";
+@import "theme";
+@import "../../../../../eportfolio-material-design-skin/assets/css/mixins";
+@import "../../../../../eportfolio-material-design-skin/assets/css/foundation/foundation";
+@import "../../../../../eportfolio-material-design-skin/assets/css/offcanvas";
+@import "../../../../../eportfolio-material-design-skin/assets/css/waves";
+@import "../../../../../eportfolio-material-design-skin/assets/css/common";
+@import "../../../../../eportfolio-material-design-skin/assets/css/animations";
+@import "../../../../../eportfolio-material-design-skin/assets/css/generated/icon";
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body:after {
+    content: 'small';
+    display: none;
+}
+
+@media #{$large-up} {
+    // Responsive flag
+    body:after {
+        content: 'large';
+        display: none;
+    }
+}
+
+html {
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    
+        @import "../../../../../eportfolio-material-design-skin/assets/css/aeroplane";
+        @import "../../../../../eportfolio-material-design-skin/assets/css/form";
+        @import "../../../../../eportfolio-material-design-skin/assets/css/login";
+        @import "../../../../../eportfolio-material-design-skin/assets/css/overview";
+        @import "../../../../../eportfolio-material-design-skin/assets/css/articles";
+        @import "../../../../../eportfolio-material-design-skin/assets/css/accountmanagement";
+        @import "../../../../../eportfolio-material-design-skin/assets/css/pager";
+        @import "../../../../../eportfolio-material-design-skin/assets/css/notifications";
+        @import "../../../../../eportfolio-material-design-skin/assets/css/error";
+        @import "../../../../../eportfolio-material-design-skin/assets/css/vacancy";
+        @import "../../../../../eportfolio-material-design-skin/assets/css/dashboard";
+        @import "../../../../../eportfolio-material-design-skin/assets/css/socialmediaposts";
+        @import "../../../../../eportfolio-material-design-skin/assets/css/search";
+        @import "../../../../../eportfolio-material-design-skin/assets/css/main";
+        @import "../../../../../eportfolio-material-design-skin/assets/css/footer";
+        @import "../../../../../eportfolio-material-design-skin/assets/css/medium";
+        @import "../../../../../eportfolio-material-design-skin/assets/css/large";
+        @import "../../../../../eportfolio-material-design-skin/assets/css/xlarge";
+        @import "../../../../../eportfolio-material-design-skin/assets/css/breadcrumb";
+        @import "../../../../../eportfolio-material-design-skin/assets/css/contentblocks";
+
+        @import "article";
+    }
+}
+
+html body {
+    section#header #topbar #headerbar {
+        header nav ul li a {
+            text-transform: none;
+        }
+        #logo a img {
+            margin-left: -33px;
+            width: 127px;
+        }
+    }
+    #wrapper {
+        &.cursus-container {
+            div#main {
+                .brandbox {
+                    position: absolute;
+                    width: 100%;
+                }
+            }
+        }
+        .breadcrumbs.activity-detail, .articles.articles_activity-detail {
+            display: none;
+        }
+    }
+
+    #wrapper div#main {
+        section {
+            
+        }
+        footer {
+            .contentblocks {
+                .contentblock {
+                    display: inline-block;
+                    .title {
+                        h2 {
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+        .bottombox {
+            background-color: $white;
+            border-top: 1px solid $border;
+            .moduleinmode_contentblock {
+                border-bottom: 1px solid $border;
+                padding-top: $column-gutter/2;
+                h2 {
+                    color: $main;
+                }
+                .contentblockcontent {
+                    @include grid-row();
+                    padding: 0 $column-gutter/2;
+                }
+                .module-container {
+                    background: transparent;
+                }
+                .itemscontainer {
+                    @include grid-row();
+                    padding: 0 $column-gutter/2;
+                    .btn {
+                        background: $main;
+                        border-radius: 0;
+                        &:hover {
+                            background-color: darken($main,10);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #wrapper div#main section .module-container .items .item .photo_wrapper {
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+}
+
+@media #{$medium-up} {
+    html body section#header #topbar #headerbar #logo a img {
+        width: 180px;
+    }
+    html body #wrapper {
+        div#main {
+            section {
+            }
+            .bottombox {
+                .moduleinmode_contentblock {
+                    .itemscontainer {
+                       text-align: right;
+                       margin-top: -60px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media #{$large-up} { 
+    html body #wrapper div#main section {
+       
+    }
+}

@@ -1,0 +1,50 @@
+{
+  "name": "base-client-material-design",
+  "version": "1.0",
+  "authors": [
+    "Andy <andy@connectholland.nl>"
+  ],
+  "description": "base-client-material-design",
+  "license": "Connect Holland",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-legacy": "jquery#1.11",
+    "jquery-modern": "jquery#2",
+    "jquery-hammerjs": "^1.1.0",
+    "jquery-placeholder": "^ 2.1.1",
+    "selectivizr": "^1.0",
+    "modernizr": "^2.8.0",
+    "normalize-scss": "~3.0",
+    "compass-mixins": "~1.0.2",
+    "foundation": "~5.4.7",
+    "Slidebars": "*",
+    "slick.js": "^1.5.0",
+    "material-design-hamburger": "*",
+    "isotope": "^2.2.0",
+    "isotope-packery": "^1.1.0",
+    "select2": "^4.0.0",
+    "waves": "*",
+    "waypoints": "^3.1.0",
+    "jquery-hoverIntent": "^1.8.0",
+    "jquery-cookie": "^1.4.0",
+    "jquery-circle-progress": "^1.1.0",
+    "Respond": "^1.4.0",
+    "REM-unit-polyfill": "^1.3.0",
+    "gulp-tasks": "svn+ssh://svn.repositories.connectholland.nl/srv/svn/main/bower_components/gulp-tasks/#^1.0",
+    "connect-holland-mixins": "svn+ssh://svn.repositories.connectholland.nl/srv/svn/main/bower_components/connect-holland-mixins/#^1.0"
+  },
+  "resolutions": {
+    "jquery": "^1.0.0",
+    "jquery-placeholder": "~2.1.1"
+  },
+  "devDependencies": {
+    "material-design-hamburger": "~1.0.0"
+  }
+}
+

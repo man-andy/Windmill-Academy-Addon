@@ -1,0 +1,135 @@
+$body-font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$email-font-family: Helvetica, Arial, sans-serif !default;
+
+//EHD specifics
+$green:					#70b84e;
+$red:					#d72245;
+$blue:					#1485c7;
+$gray:					#343434;
+$purple:				#713e7e;
+$yellow:				#f8ac37;
+$lightgrey: 			#F7F7F7;
+$pink:					#d72245;
+
+
+//Basics
+$white:                 #ffffff;
+$black:                 #000000;
+$background:            #EDEDED;
+$main:                  $blue;
+$text:                  #4b4b4b;
+$hintText:              #8d8d8d;
+$heading:               #4b4b4b;
+$link:                  $blue;
+$mainButton:            $main;
+$secondButton:          $link;
+$thirdButton:           #E4E4E4;
+$iconButton:            $main;
+$devider:               #CBCBCB;
+$border:                #e5e7e7;
+$notice:               	#535353;
+
+//brandbox
+$theme1:               $green;
+$theme2:               $blue;
+$theme3:               $yellow;
+$theme4:               $purple;
+
+//Login
+$loginBg:               none;
+
+//Navigation
+$navigationLink:        #464646;
+$submenu:               darken($main,10);
+$submenuNavigationLink: $white;
+$hamburger:             $main;
+
+//Elasticsearch
+$searchIconDesktop:		$pink;
+
+//Notificationbar
+$notificationBar:       $yellow;
+$notificationClose:     $white;
+$notificationText:      $white;
+
+//loading loader
+$loadingloaderBackground: rgba(0, 0, 0, 0.2);
+$loadingloaderBlock1:   $green;
+$loadingloaderBlock2:   $yellow;
+
+//Articles
+$actionBox:				$yellow;
+$articleintro:			#D8D8D8;
+$articleintroText:		$text;
+
+//Smarttip
+$smarttip:        		$yellow;
+$smarttiptext:        	$white;
+
+//Breadcrumbs
+$breadcrumbsNonactive:	#848484;
+$breadcrumbsActive:		#B8B8B8;
+$breadcrumbsDevider:	#B8B8B8;
+
+//Footer
+$footer:                $main;
+$footerText:            $white;
+
+//Cards
+$cardBg:                $white;
+$cardBorder:            $border;
+
+//Pager
+$pagerActive:           $main;
+$pager:                 $main;
+$pagerText:				$main;
+$pagerActiveText:		$white;
+
+//Vacancy
+$vacancy:               $main;
+$vacancyBtn:            $thirdButton;
+$vacancysubText:        $link;
+$vacancyBottombar:      #F4F4F4;
+$filterBG:              #F7F7F7;
+$filterActive:          $main;
+$filterNonActive:       #FFFFFF;
+
+//Module blocks 
+$module-background:		$white;
+$module-item-background: $white;
+$module-main: 			$yellow;
+$module-summary:		lighten($border,5);
+$module-footer: 		#F5F5F5;
+
+//e-Tools
+$timeline:              $border;
+$timelineFill:          $main;
+$milestone:             $border;
+$milestoneFill:         $main;
+$sideLineCard:          $link;
+$eTest:                 $main;
+$eTestWorkshop:         $link;
+
+//Form
+$label:                 #949494;
+$error:                 $red;
+$correct:               $green;
+$fieldDevider:          #ECECEC;
+$fieldFocus:            #0000FF;
+$select:                #E4E4E4;
+$disabled-color:        #C9C9C9;
+$checkbox-checked:      $link;
+$checkbox-border:       $border;
+$radio-checked:         $main;
+$radio-border:          $border;
+
+//Talentscan
+$talentscanQuestion:	$red;
+$talentscanAnswer:		$red;
+$talentscanText:		$white;
+$talentscanNav:			darken($red,10);
+$talentscanProgressbar:	$main;
+
+//Scroll companion
+$scrollCompanionToggle: $main;
+

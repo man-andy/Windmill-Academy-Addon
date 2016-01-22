@@ -1,0 +1,260 @@
+#wrapper div#main {
+    section {
+        .actionbox {
+            background: $white;
+            border-bottom: 1px solid $border;
+            .actionbox_container .contentblock {
+                @include grid-column(12);
+                text-align: left;
+                color: $text;
+                padding-bottom: $column-gutter;
+                .contentblockcontent {
+                    text-align: left;
+                    width: 100%;
+                    a {
+                        color: $main;
+                        font-weight: 700;
+                    }
+                }
+                .contentblockcontent.title {
+                    text-align: left;
+                    h2 {
+                        color: $main;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        font-style: normal;
+                        margin-top: 0;
+                    }
+                }
+                .text {
+                    display: block;
+                }
+                .richtext {
+                    margin: 0;
+                }
+                .label {
+                    margin-bottom: 0;
+                    .btn {
+                        border: none;
+                        background: $text;
+                        color: $white;
+                        padding: 10px 35px;
+                        margin-left: 0;
+                        border-radius: 0;
+                        text-transform: none;
+                        &:hover {
+                            background: $main;
+                        }
+                    }
+                }
+            }
+            .compositeform {
+                background: $main;
+                padding: $column-gutter;
+                .text_field {
+                    input {
+                        background: $white; 
+                        padding: $column-gutter/2;
+                    }
+                    label {
+                        top: 0.7rem;
+                        left: 1rem;
+                        &.active {
+                            transform: translateY(-174%);
+                            color: $white;
+                            left: 0;
+                        }
+                    }
+                }
+                .submit_field .btn {
+                    background: $green;
+                    border: none;
+                    border-radius: 0;
+                    display: block;
+                    margin: 0;
+                    width: 100%;
+                    height: 3rem;
+                    &:hover {
+                        background: darken($green,10);
+                        color: $white;
+                    }
+                    &:after {
+                        @include icon-style(search);
+                        margin-left: 5px;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+        .articles {
+            border-bottom: transparent;
+            .contentblocks {
+                .moduleinmode {
+                    .layout_list {
+                        border: 1px solid $border;
+                        &:hover {
+                            box-shadow: 2px 8px 30px #DAD8D8;
+                        }
+                        .item {
+                            background-color: $white;
+                            padding: $column-gutter/2;
+                            border-bottom: 1px solid $border;
+                            color:$text;
+                            @include transition;
+                            &:first-child {
+                                border-top: transparent;
+                            }
+                            &:last-child {
+                                border-bottom: transparent;
+                            }
+                            .title {
+                                color: $main;
+                                text-transform: none;
+                            }
+                            &:hover {
+                                background-color: $main;
+                                color: $white;
+                                @include transition;
+                                span {
+                                    @include transition;
+                                    color: $white;
+                                }
+                            }
+                            label,
+                            span,
+                            .divider {
+                                color:$text;
+                            }
+                        }
+                        .optioncolumn {
+                            vertical-align: top;
+                            background-color: $white;
+                            border-top: 1px solid $border;
+                            .item {
+                                padding: $column-gutter/2;
+                                border-left: 3px solid $main;
+                                span {
+                                    @include transition;
+                                    float: right;
+                                    color: $main;
+                                }
+                            }
+                        }
+                    }
+                    .title {
+                        h2 {
+                            background-color: transparent;
+                            color: $main;
+                            text-transform: uppercase;
+                            padding-left: 0;
+                        }
+                        &:hover {
+                            box-shadow: 0 0 0 transparent;
+                        }
+                    }
+                }
+            }
+            &.articles_home {
+                .article_wrapper {
+                    .articlemaincontentblocks {
+                        margin: $column-gutter 0;
+                        .contentblock {
+                            margin-bottom: $column-gutter;
+                            &.fullwidth {
+                                width: 100%;
+                                margin-top: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media #{$medium-up} {
+    #wrapper div#main section {
+        .actionbox {
+            .actionbox_container .contentblock {
+                padding-bottom: 0;
+                .contentblockcontent {
+                }
+                .photo {
+                    width: 25%;
+                    float: left;
+                }
+                .title, .text {
+                    width: 70%;
+                    float: right;
+                }
+                .title {
+                    margin-bottom: 0;
+                }
+                .label {
+                    text-align: right;
+                    margin: 7px 0 -6px;
+                }
+            }
+            .actionbox_container .contentblock.compositeform {
+                padding-bottom: $column-gutter;
+                .text_field {
+                    padding: 0; 
+                    width: 75%;
+                    display: inline-block;
+                }
+                .submit_field {
+                    width: 25%;
+                    display: inline-block;
+                    vertical-align: top;
+                }
+            }
+        }
+    }
+}
+
+@media #{$large-up} { 
+    #wrapper div#main section {
+        .articles_home {
+            .article-contentblocks {
+                .articlemaincontentblocks {
+                    .contentblock {
+                        @include grid-column(6);
+                    }
+                }
+                .layout_list {
+                    .optioncolumn {
+                        width: 50%;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+        .actionbox {
+            .actionbox_container .contentblock.compositeform {
+                text-align: center;
+                padding: 0;
+                height: 78px;
+                position: static;
+                form {
+                    position: absolute;
+                    width: 100%;
+                    left: 0;
+                    background: $main;
+                    height: 78px;
+                    padding-top: $column-gutter/2;
+                }
+                .text_field {
+                    width: 50%;
+                    label.active {
+                        transform: translateY(0);
+                        left: -156px;
+                        font-size: 0.9rem;
+                    }
+                }
+                .submit_field {
+                    width: 16%;
+                }
+            }
+        }
+    }
+}
