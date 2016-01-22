@@ -5,7 +5,7 @@ Addon to implement an academy module in an eportfolio.
 Add the addon in your composer json: composer require connectholland/academy-addon dev-master
 
 Activate the addon in your WM{clientname}Turbine.php by adding:
-```
+``` php
 public function registerAddons()
 {
     $addons = parent::registerAddons();
@@ -22,7 +22,7 @@ Add (at least) three files in Windmill/etc in your own client for adding your cu
 * eportfolio_academy-development.xml
 
 Your eportfolio_academy.xsl should contain:
-```
+``` xml
 <turbine>
     <client>
         <type>academy</type>
@@ -42,13 +42,13 @@ Your eportfolio_academy.xsl should contain:
 
 ## Client modules
 If you have client specific modules like Wmactivityeportfolio{clientname} you can extend them from the modules in the addon:
-```
+``` php
 class Wmactivityeportfolio{clientname}Settings extends WmactivityeportfolioacademyaddonCMS
 {
 }
 ```
 or:
-```
+``` php
 use ConnectHolland\Eportfolio\Addon\Academy\Mongo\Activity as AcademyActivity;
 class Activity extends AcademyActivity
 {
@@ -61,6 +61,6 @@ Based on the set designtemplate and uft in the etc you should also create those 
 * Windmill/xsl/academy.xsl
 
 In those files you can import the default files from the skin like:
-```
+``` xsl
 <xsl:import href='../../vendor/connectholland/eportfolio-material-design-skin/views/uft/eportfolio.xsl'/>
 ```
