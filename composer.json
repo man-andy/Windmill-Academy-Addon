@@ -32,6 +32,7 @@
 		},
 		"classmap": [
 			"src/Modules",
+			"src/Mongo",
 			"src/xsl",
 			"src/var"
 		]
