@@ -11,7 +11,7 @@
 		"connectholland/windmill": "^6.10",
 		"connectholland/eportfolio": "^8.0",
 		"connectholland/eportfolio-material-design-skin": "^3.0",
-		"connectholland/eportfolio-activity-plugin": "^1.0"
+		"connectholland/eportfolio-activity-plugin": "^2.0"
 	},
 	"repositories": [
 		{
@@ -32,6 +32,7 @@
 		},
 		"classmap": [
 			"src/Modules",
+			"src/Mongo",
 			"src/xsl",
 			"src/var"
 		]

@@ -44,14 +44,12 @@ class Wmactivityeportfolioacademyaddon extends WmactivityeportfolioacademyaddonS
             case 'spotlight':
                 $this->view = "blocks";
                 $mc->add("spotlight", true);
-                $mc->add("activity_type", array("", "rekenen-en-taal"), MongoCriteria::NOT_IN);
                 $mc->setLimit(3);
                 break;
             case 'related':
             case 'special':
                 $this->view = "blocks";
                 $mc->add("special", true);
-                $mc->add("activity_type", array("", "rekenen-en-taal"), MongoCriteria::NOT_IN);
                 $mc->setLimit(3);
                 break;
         }
@@ -90,12 +88,14 @@ class Wmactivityeportfolioacademyaddon extends WmactivityeportfolioacademyaddonS
    protected function addMongoObject(MongoObject $mongoobject)
    {
        $ce = parent::addMongoObject($mongoobject);
+
        if ($mongoobject->checkAlreadyApplied()) {
            $ce->addProperty('already_applied', '1');
        }
 
        return $ce;
    }
+
 }
 
 class WmactivityeportfolioacademyaddonCMS extends Wmactivityeportfolioacademyaddon

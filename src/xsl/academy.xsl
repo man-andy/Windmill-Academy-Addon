@@ -1,15 +1,6 @@
 <?xml version='1.0'?>
 <!DOCTYPE xsl:stylesheet>
 <xsl:stylesheet version='1.0' xmlns:xsl='http://www.w3.org/1999/XSL/Transform' xmlns:php='http://php.net/xsl' exclude-result-prefixes='php'>
-    <!--
-    Import of the default XSL from the skin
-    -->
-    <xsl:import href='../../../eportfolio-material-design-skin/views/xsl/default.xsl'/>
-
-    <!--
-    Import of the overview XSL from the skin
-    -->
-    <xsl:import href='../../../eportfolio-material-design-skin/views/xsl/overview.xsl'/>
     
     <!--
     Ouput loose HTML
@@ -204,6 +195,62 @@
     <xsl:template match='/wmpage/node()[data/node() ]' mode='pagerOffsetArgument'>
         <xsl:text>activity:offset=</xsl:text>
         <xsl:value-of select='@offset'/>
+    </xsl:template>
+
+    <!--
+    Adds the title and text to the form content
+    -->
+    <xsl:template match='/wmpage/article/article[@requested = "1"]/contentblocks[@group = "action"]/contentblock[template = "compositeform"]/form' mode='form_content'>
+        <div class='wrapper'>
+            <xsl:apply-templates select='parent::contentblock/title' mode='cbContent'/>
+            <xsl:apply-templates select='parent::contentblock/text' mode='cbContent'/>
+            <div class="formfield text_field querystringfield">
+                <xsl:apply-templates select='self::node()' mode='querystringName'/>
+                <label for="querystring_input">
+                    <xsl:value-of select='php:functionString("WMXSLFunctionsEportfolio::text", "querystring_label", "cbcompositeform.brandbox")'/>
+                </label>
+            </div>
+            <div class="formfield submit_field field">
+                <button type="submit" class='waves-effect waves-float btn'>
+                    <xsl:value-of select='php:functionString("WMXSLFunctionsEportfolio::text", "searchbutton_label", "cbcompositeform.brandbox")'/>
+                </button>
+            </div>
+        </div>
+    </xsl:template>
+
+    <!--
+    Adds the title and text to the form content
+    -->
+    <xsl:template match='node()' mode='querystringName'>
+        <input id="querystring_input" name="querystring" value="" type="text"></input>
+    </xsl:template>
+    <xsl:template match='node()[ancestor::wmpage/@sitename = "eportfolio_vrijwilligersacademie"]' mode='querystringName'>
+        <input id="querystring_input" name="activity:query" value="" type="text"></input>
+    </xsl:template>
+
+    <!--
+    Adds the action attribute to the form
+    -->
+    <xsl:template match='/wmpage/article/article[@requested = "1"]/contentblocks[@group = "action"]/contentblock[template = "compositeform"]/form' mode='form_actionAttribute'>
+        <xsl:attribute name='action'>
+           <xsl:value-of select='php:functionString("WMXSLFunctionsEportfolio::text", "search_action", "cbcompositeform.brandbox")'/>
+        </xsl:attribute>
+    </xsl:template>
+
+    <!--
+    Adds the value of the method to the method attribute
+    -->
+    <xsl:template match='/wmpage/article/article[@requested = "1"]/contentblocks[@group = "action"]/contentblock[template = "compositeform"]/form' mode='form_methodAttributeValue'>
+        <xsl:text>post</xsl:text>
+    </xsl:template>
+
+    <!--
+    Sets the input for the label and adds the bar
+    -->
+    <xsl:template match='/wmpage/article/article[@requested = "1"]/contentblocks/contentblock[template = "compositeform"]/form/text | /wmpage/article/article[@requested = "1"]/contentblocks/contentblock[template = "compositeform"]/form/longtext' mode='form_field_elements'>
+        <xsl:apply-templates select='self::node()' mode='form_field_input'/>
+        <xsl:apply-templates select='self::node()' mode='form_field_label'/>
+        <span class="bar"></span>
     </xsl:template>
 
 </xsl:stylesheet>
